@@ -34,13 +34,18 @@ class ViewState extends base.ViewState {
                   Navigator.pushNamed(
                     context,
                     "/hint_2",
-                    // arguments: {"key": await context.bloc.serverKey},
+                    arguments: {"key": await context.bloc.serverKey},
                   );
                 },
                 child: Text(context.strings.homeHint2ButtonLabel),
               ),
               ElevatedButton(
-                onPressed: () {},
+                onPressed: () async {
+                  Navigator.pushNamed(
+                    context,
+                    "/exam",
+                  );
+                },
                 child: Text(context.strings.homeExamButtonLabel),
               )
             ],
